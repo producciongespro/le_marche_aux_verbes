@@ -17,6 +17,8 @@ export default function SujetDropZone({
   score,
   selectedLeft,
   selectedRight,
+  isLeftPointerPlaced = false,
+  isRightPointerPlaced = false,
   feedbackStatus,
   showTutorialArrows,
   onSelectCard,
@@ -133,7 +135,7 @@ export default function SujetDropZone({
           }
         }}
         style={
-          selectedLeft
+          selectedLeft && !isLeftPointerPlaced
             ? {
                 paddingTop: '7%',
                 backgroundColor: '#1B63E9',
@@ -147,7 +149,7 @@ export default function SujetDropZone({
             : undefined
         }
         className={`absolute top-[24%] left-[10%] w-[36%] h-[38%] box-border px-1 font-handlee font-bold text-center text-[clamp(0.72rem,1.05vw,1.05rem)] leading-tight flex flex-col items-center justify-start ${
-          selectedLeft
+          selectedLeft && !isLeftPointerPlaced
             ? 'opacity-100 cursor-pointer z-20 shadow-md'
             : 'opacity-0 pointer-events-none'
         }`}
@@ -179,7 +181,7 @@ export default function SujetDropZone({
           }
         }}
         style={
-          selectedRight
+          selectedRight && !isRightPointerPlaced
             ? {
                 paddingTop: isRightConjugated ? '2%' : '7%',
                 backgroundColor: '#1B63E9',
@@ -193,7 +195,7 @@ export default function SujetDropZone({
             : undefined
         }
         className={`absolute top-[24%] left-[54%] w-[36%] h-[38%] box-border px-1 font-handlee font-bold text-center text-[clamp(0.72rem,1.05vw,1.05rem)] leading-tight flex flex-col items-center justify-start ${
-          selectedRight
+          selectedRight && !isRightPointerPlaced
             ? 'opacity-100 cursor-pointer z-20 shadow-md'
             : 'opacity-0 pointer-events-none'
         }`}

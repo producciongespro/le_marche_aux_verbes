@@ -173,19 +173,34 @@ describe('Suite 5: Pruebas de Integración de Componentes e Interacción E2E (<A
     const dropZone = screen.getByTestId('sujet-dropzone');
     expect(within(dropZone).getByRole('heading', { name: 'Sujet' })).toBeInTheDocument();
 
-    // 1. Abrir y cerrar modal de Aide
+    // 1. Abrir y cerrar modal de Aide (verificando z-index superior a las tarjetas .cartas)
+    const sampleCard = within(screen.getByRole('region', { name: 'Présent' })).getAllByRole(
+      'button'
+    )[0];
+    const cardZIndex = Number(sampleCard.style.zIndex || 99);
+
     fireEvent.click(screen.getByRole('button', { name: 'Aide' }));
     const helpDialog = screen.getByRole('dialog', { name: /Comment va-t-on jouer\?/i });
     expect(helpDialog).toBeInTheDocument();
+    expect(Number(helpDialog.style.zIndex)).toBeGreaterThan(cardZIndex);
+    expect(helpDialog).toHaveClass('animate-modalBackdropFade');
+    expect(within(helpDialog).getByTestId('modal-dialog-box')).toHaveClass(
+      'animate-modalSlideDown'
+    );
     expect(within(helpDialog).getByText(/Bonne chance !/i)).toBeInTheDocument();
 
     fireEvent.click(within(helpDialog).getByRole('button', { name: /Compris !/i }));
     expect(screen.queryByRole('dialog', { name: /Comment va-t-on jouer\?/i })).not.toBeInTheDocument();
 
-    // 2. Abrir y cerrar modal de À propos (Créditos oficiales MEP)
+    // 2. Abrir y cerrar modal de À propos (Créditos oficiales MEP, verificando z-index superior y animación)
     fireEvent.click(screen.getByRole('button', { name: 'À propos' }));
     const aboutDialog = screen.getByRole('dialog', { name: /À propos/i });
     expect(aboutDialog).toBeInTheDocument();
+    expect(Number(aboutDialog.style.zIndex)).toBeGreaterThan(cardZIndex);
+    expect(aboutDialog).toHaveClass('animate-modalBackdropFade');
+    expect(within(aboutDialog).getByTestId('modal-dialog-box')).toHaveClass(
+      'animate-modalSlideDown'
+    );
     expect(
       within(aboutDialog).getByText(/Ministerio de Educación Pública de Costa Rica/i)
     ).toBeInTheDocument();

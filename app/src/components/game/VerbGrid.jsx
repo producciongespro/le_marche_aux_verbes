@@ -14,6 +14,7 @@ export default function VerbGrid({
   isLocked = false,
   modeConfig,
   onSelectCard,
+  onPointerDropCard,
   onDragStart,
 }) {
   const isLeft = side === 'left';
@@ -22,7 +23,7 @@ export default function VerbGrid({
     <section
       id={isLeft ? 'izquierdo' : 'derecho'}
       aria-label={label}
-      className={`laterales absolute top-[20%] h-[57%] w-[35%] pl-[2%] ml-[3%] box-border z-10 ${
+      className={`laterales absolute top-[20%] h-[57%] w-[35%] pl-[2%] ml-[3%] box-border ${
         isLeft ? 'left-[0%]' : 'left-[60.5%]'
       }`}
     >
@@ -44,6 +45,7 @@ export default function VerbGrid({
               isSelected={isSelected}
               isLocked={isLocked}
               onSelectCard={onSelectCard}
+              onPointerDropCard={onPointerDropCard}
               onDragStart={onDragStart}
             />
           );

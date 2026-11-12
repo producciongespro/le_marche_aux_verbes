@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   MODALITY,
   GRAMMAR_MODES,
@@ -30,6 +30,17 @@ export default function MenuModal({
 }) {
   const [hoveredMode, setHoveredMode] = useState(null);
 
+  useEffect(() => {
+    if (!isOpen || !canCloseMenu) return undefined;
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape' && onCloseMenu) {
+        onCloseMenu();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, canCloseMenu, onCloseMenu]);
+
   if (!isOpen) return null;
 
   const isFormation = modality === MODALITY.FORMATION;
@@ -37,12 +48,22 @@ export default function MenuModal({
 
   return (
     <div
+      id="divMenu"
       role="dialog"
       aria-modal="true"
       aria-label="Menu principal"
-      className="fixed inset-0 z-50 flex items-start justify-center bg-black/50 overflow-y-auto pt-[1%] px-2"
+      style={{ zIndex: 2000 }}
+      onClick={(e) => {
+        if (canCloseMenu && e.target === e.currentTarget && onCloseMenu) {
+          onCloseMenu();
+        }
+      }}
+      className="fixed inset-0 z-[2000] flex items-start justify-center bg-black/50 overflow-y-auto animate-modalBackdropFade"
     >
-      <div className="relative w-[90%] max-w-[1400px] mx-auto rounded-[15px] shadow-2xl select-none overflow-hidden">
+      <div
+        data-testid="modal-dialog-box"
+        className="relative w-[90%] mx-auto mt-[1%] rounded-[15px] shadow-2xl select-none overflow-hidden animate-modalSlideDown"
+      >
         {/* Imagen base del menú original */}
         <img
           src="./img/fondo_menu.jpg"

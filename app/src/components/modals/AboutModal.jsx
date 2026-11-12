@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 /**
  * @file AboutModal.jsx
  * @description Modal de créditos institucionales 1:1 (#divModales con `./img/fondo_acerca_txt.jpg`)
  * del Ministerio de Educación Pública de Costa Rica (MEP - DRTE - GESPRO) y la Asesoría Nacional
- * de Francés, con texto accesible `sr-only` para lectores de pantalla.
+ * de Francés, con texto accesible `sr-only` para lectores de pantalla y cierre por clic en backdrop o Escape.
  */
 export default function AboutModal({ isOpen, onClose }) {
+  useEffect(() => {
+    if (!isOpen) return undefined;
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape' && onClose) {
+        onClose();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
+
   if (!isOpen) return null;
 
   return (
@@ -15,9 +26,16 @@ export default function AboutModal({ isOpen, onClose }) {
       role="dialog"
       aria-modal="true"
       aria-label="À propos"
-      className="fixed inset-0 z-50 flex items-start justify-center bg-black/50 overflow-y-auto pt-[1%] px-2"
+      style={{ zIndex: 2000 }}
+      onClick={(e) => {
+        if (e.target === e.currentTarget && onClose) onClose();
+      }}
+      className="fixed inset-0 z-[2000] flex items-start justify-center bg-black/50 overflow-y-auto animate-modalBackdropFade"
     >
-      <div className="relative w-[90%] max-w-[1400px] mx-auto rounded-[15px] shadow-2xl select-none overflow-hidden">
+      <div
+        data-testid="modal-dialog-box"
+        className="relative w-[90%] mx-auto mt-[1%] rounded-[15px] shadow-2xl select-none overflow-hidden animate-modalSlideDown"
+      >
         {/* Lámina oficial de créditos institucionales MEP */}
         <img
           id="imagen_modal"

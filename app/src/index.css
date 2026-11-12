@@ -22,3 +22,32 @@
     #EF4135 84px
   );
 }
+
+/* Animación de cortina (Bootstrap 3.3.7 .modal.fade y .modal.fade .modal-dialog) */
+@keyframes modalBackdropFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes modalSlideDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -25%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-modalBackdropFade {
+  animation: modalBackdropFade 0.15s linear forwards;
+}
+
+.animate-modalSlideDown {
+  animation: modalSlideDown 0.3s ease-out forwards;
+}

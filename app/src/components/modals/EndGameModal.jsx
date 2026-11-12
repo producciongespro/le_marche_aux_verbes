@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { MODALITY } from '../../constants/gameConfig.js';
 
 /**
@@ -16,6 +16,17 @@ export default function EndGameModal({
   totalLevels,
   onReturnToMenu,
 }) {
+  useEffect(() => {
+    if (!isOpen) return undefined;
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape' && onReturnToMenu) {
+        onReturnToMenu();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onReturnToMenu]);
+
   if (!isOpen) return null;
 
   const isCompetition = modality === MODALITY.COMPETITION;
@@ -31,9 +42,18 @@ export default function EndGameModal({
       aria-modal="true"
       aria-label="Fin du jeu"
       data-testid="end-game-modal"
-      className="fixed inset-0 z-50 flex items-start justify-center bg-black/50 overflow-y-auto pt-[1%] px-2"
+      style={{ zIndex: 2000 }}
+      onClick={(e) => {
+        if (e.target === e.currentTarget && onReturnToMenu) {
+          onReturnToMenu();
+        }
+      }}
+      className="fixed inset-0 z-[2000] flex items-start justify-center bg-black/50 overflow-y-auto animate-modalBackdropFade"
     >
-      <div className="relative w-[90%] max-w-[1400px] mx-auto rounded-[15px] shadow-2xl select-none overflow-hidden">
+      <div
+        data-testid="modal-dialog-box"
+        className="relative w-[90%] mx-auto mt-[1%] rounded-[15px] shadow-2xl select-none overflow-hidden animate-modalSlideDown"
+      >
         {/* Lámina base de fin de juego (medalla oficial en Compétition o fondo_menu en Formation) */}
         <img
           id="imagen_modal"

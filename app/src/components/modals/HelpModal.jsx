@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 /**
  * @file HelpModal.jsx
  * @description Modal de instrucciones 1:1 (#divModales con `./img/fondo_ayuda_txt.png`)
  * para "Le marché aux verbes" (MEP - GESPRO), incluyendo texto accesible `sr-only`
- * para lectores de pantalla.
+ * para lectores de pantalla y cierre por clic en backdrop o tecla Escape.
  */
 export default function HelpModal({ isOpen, onClose }) {
+  useEffect(() => {
+    if (!isOpen) return undefined;
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape' && onClose) {
+        onClose();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
+
   if (!isOpen) return null;
 
   return (
@@ -15,9 +26,16 @@ export default function HelpModal({ isOpen, onClose }) {
       role="dialog"
       aria-modal="true"
       aria-label="Comment va-t-on jouer?"
-      className="fixed inset-0 z-50 flex items-start justify-center bg-black/50 overflow-y-auto pt-[1%] px-2"
+      style={{ zIndex: 2000 }}
+      onClick={(e) => {
+        if (e.target === e.currentTarget && onClose) onClose();
+      }}
+      className="fixed inset-0 z-[2000] flex items-start justify-center bg-black/50 overflow-y-auto animate-modalBackdropFade"
     >
-      <div className="relative w-[90%] max-w-[1400px] mx-auto rounded-[15px] shadow-2xl select-none overflow-hidden">
+      <div
+        data-testid="modal-dialog-box"
+        className="relative w-[90%] mx-auto mt-[1%] rounded-[15px] shadow-2xl select-none overflow-hidden animate-modalSlideDown"
+      >
         {/* Lámina oficial de instrucciones */}
         <img
           id="imagen_modal"

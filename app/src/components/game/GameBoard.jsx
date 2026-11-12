@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import VerbGrid from './VerbGrid.jsx';
 import SujetDropZone from './SujetDropZone.jsx';
 
@@ -26,6 +26,33 @@ export default function GameBoard({
   onDragStart,
   onNextLevel,
 }) {
+  const [pointerPlacedLeftUid, setPointerPlacedLeftUid] = useState(null);
+  const [pointerPlacedRightUid, setPointerPlacedRightUid] = useState(null);
+
+  useEffect(() => {
+    if (!selectedLeft) {
+      setPointerPlacedLeftUid(null);
+    }
+  }, [selectedLeft]);
+
+  useEffect(() => {
+    if (!selectedRight) {
+      setPointerPlacedRightUid(null);
+    }
+  }, [selectedRight]);
+
+  const handlePointerDropCard = (card) => {
+    if (!card) return;
+    if (card.side === 'left') {
+      setPointerPlacedLeftUid(card.uid);
+    } else {
+      setPointerPlacedRightUid(card.uid);
+    }
+    if (onDropCard) {
+      onDropCard(card, { skipAudio: true });
+    }
+  };
+
   return (
     <main className="contents">
       {/* Columna Izquierda: Grilla 3x3 (#izquierdo) */}
@@ -38,6 +65,7 @@ export default function GameBoard({
         modeConfig={modeConfig}
         hasAudio={Boolean(modeConfig?.leftHasAudio)}
         onSelectCard={onSelectCard}
+        onPointerDropCard={handlePointerDropCard}
         onDragStart={onDragStart}
       />
 
@@ -50,6 +78,12 @@ export default function GameBoard({
         score={score}
         selectedLeft={selectedLeft}
         selectedRight={selectedRight}
+        isLeftPointerPlaced={Boolean(
+          selectedLeft && pointerPlacedLeftUid === selectedLeft.uid
+        )}
+        isRightPointerPlaced={Boolean(
+          selectedRight && pointerPlacedRightUid === selectedRight.uid
+        )}
         feedbackStatus={feedbackStatus}
         showTutorialArrows={showTutorialArrows}
         onSelectCard={onSelectCard}
@@ -67,6 +101,7 @@ export default function GameBoard({
         modeConfig={modeConfig}
         hasAudio={Boolean(modeConfig?.rightHasAudio)}
         onSelectCard={onSelectCard}
+        onPointerDropCard={handlePointerDropCard}
         onDragStart={onDragStart}
       />
     </main>
