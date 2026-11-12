@@ -1,15 +1,18 @@
 import React, { useState, useRef, useEffect } from 'react';
 
+const ROW_TOP_POSITIONS = ['3.26%', '36.45%', '69.64%'];
+const COL_LEFT_POSITIONS = ['2.16%', '34.87%', '67.57%'];
+
 /**
  * @file VerbCard.jsx
- * @description Tarjeta individual (.cartas) con las proporciones, márgenes y textura 1:1
- * (`./img/fondo_tarjetas.png`) del recurso original del MEP.
- * Implementa arrastre físico real en el DOM por coordenadas (Pointer Drag & Drop 100% opaco,
- * sin fantasma nativo HTML5) con detección de intersección sobre #principal ("Sujet"),
- * además de soporte por Clic/Teclado accesible y compatibilidad con eventos de prueba.
+ * @description Tarjeta individual (.cartas) posicionada con coordenadas porcentuales exactas
+ * (`top` respecto al alto y `left` respecto al ancho de `.contenedor`) para garantizar que en las
+ * 3 filas y 3 columnas siempre quede perfectamente contenida dentro de su cajita en el fondo ilustrado,
+ * corrigiendo el desfase vertical de las filas 2 y 3 que ocurría en el CSS original por usar márgenes en %.
  */
 export default function VerbCard({
   card,
+  slotIndex = 0,
   modeConfig,
   isSelected,
   isLocked,
@@ -158,6 +161,8 @@ export default function VerbCard({
 
   // Si fue seleccionada por Clic (sin arrastre por puntero), se oculta en la grilla y se muestra en el slot central
   const hideInGridForClickSelection = isSelected && !isPointerPlaced && !isDragging;
+  const row = Math.min(2, Math.max(0, Math.floor(slotIndex / 3)));
+  const col = Math.min(2, Math.max(0, slotIndex % 3));
 
   return (
     <button
@@ -180,12 +185,11 @@ export default function VerbCard({
       aria-pressed={isSelected}
       data-testid={`card-${card.uid}`}
       style={{
-        width: '26%',
-        height: '26%',
-        marginLeft: '1.8%',
-        marginTop: '3.0%',
-        marginRight: '5%',
-        marginBottom: '2.5%',
+        position: 'absolute',
+        top: ROW_TOP_POSITIONS[row],
+        left: COL_LEFT_POSITIONS[col],
+        width: '25.45%',
+        height: '24.23%',
         paddingTop: isConjugatedRight ? '2%' : '7%',
         backgroundColor: '#1B63E9',
         backgroundImage: "url('./img/fondo_tarjetas.png')",
@@ -194,7 +198,6 @@ export default function VerbCard({
         borderRadius: '16px',
         border: '1px solid #fff',
         color: '#000',
-        position: 'relative',
         transform:
           offset.x !== 0 || offset.y !== 0
             ? `translate3d(${offset.x}px, ${offset.y}px, 0)`
@@ -202,7 +205,7 @@ export default function VerbCard({
         zIndex: isDragging ? 1000 : isPointerPlaced ? 500 : 99,
         touchAction: 'none',
       }}
-      className={`cartas inline-flex flex-col items-center justify-start align-top box-border px-1 font-handlee font-bold text-center text-[clamp(0.72rem,1.05vw,1.05rem)] leading-tight select-none focus:outline-none ${
+      className={`cartas flex flex-col items-center justify-start box-border px-1 font-handlee font-bold text-center text-[clamp(0.72rem,1.05vw,1.05rem)] leading-tight select-none focus:outline-none ${
         isDragging ? 'cursor-grabbing shadow-2xl' : 'transition-transform duration-150'
       } ${hideInGridForClickSelection ? 'opacity-0' : 'opacity-100'} ${
         isDisabled ? 'cursor-not-allowed' : 'cursor-grab'

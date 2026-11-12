@@ -35,21 +35,24 @@ export default function VerbGrid({
         id={isLeft ? 'contendorIzquierdo' : 'contendorDerecho'}
         className="contenedor absolute top-[9.9%] left-[0.2%] w-full h-[92.5%]"
       >
-        {cards.map((card) => {
-          const isSelected = selectedCard?.uid === card.uid;
-          return (
-            <VerbCard
-              key={card.uid}
-              card={card}
-              modeConfig={modeConfig}
-              isSelected={isSelected}
-              isLocked={isLocked}
-              onSelectCard={onSelectCard}
-              onPointerDropCard={onPointerDropCard}
-              onDragStart={onDragStart}
-            />
-          );
-        })}
+        {cards
+          .filter((card) => card && !card.matched)
+          .map((card, visibleIndex) => {
+            const isSelected = selectedCard?.uid === card.uid;
+            return (
+              <VerbCard
+                key={card.uid}
+                card={card}
+                slotIndex={visibleIndex}
+                modeConfig={modeConfig}
+                isSelected={isSelected}
+                isLocked={isLocked}
+                onSelectCard={onSelectCard}
+                onPointerDropCard={onPointerDropCard}
+                onDragStart={onDragStart}
+              />
+            );
+          })}
       </div>
     </section>
   );
