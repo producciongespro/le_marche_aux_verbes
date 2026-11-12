@@ -1,0 +1,986 @@
+[
+  {
+    "id": 0,
+    "esp": "mirar",
+    "pre": "regarder",
+    "pas": "J'ai regardé",
+    "fut": "Je regarderai",
+    "audio": {
+      "pre": "regarder.mp3",
+      "pas": "j-ai-regarde.mp3",
+      "fut": "je-regarderai.mp3"
+    }
+  },
+  {
+    "id": 1,
+    "esp": "comer",
+    "pre": "manger",
+    "pas": "J'ai mangé",
+    "fut": "Je mangerai",
+    "audio": {
+      "pre": "manger.mp3",
+      "pas": "j-ai-mange.mp3",
+      "fut": "je-mangerai.mp3"
+    }
+  },
+  {
+    "id": 2,
+    "esp": "escuchar",
+    "pre": "écouter",
+    "pas": "J'ai écouté",
+    "fut": "J'écouterai",
+    "audio": {
+      "pre": "ecouter.mp3",
+      "pas": "j-ai-ecoute.mp3",
+      "fut": "j--ecouterai.mp3"
+    }
+  },
+  {
+    "id": 3,
+    "esp": "hablar",
+    "pre": "parler",
+    "pas": "J'ai parlé",
+    "fut": "Je parlerai",
+    "audio": {
+      "pre": "parler.mp3",
+      "pas": "j-ai-parle.mp3",
+      "fut": "je-parlerai.mp3"
+    }
+  },
+  {
+    "id": 4,
+    "esp": "dibujar",
+    "pre": "dessiner",
+    "pas": "J'ai dessiné",
+    "fut": "Je dessinerai",
+    "audio": {
+      "pre": "dessiner.mp3",
+      "pas": "j-ai-dessine.mp3",
+      "fut": "je-dessinerai.mp3"
+    }
+  },
+  {
+    "id": 5,
+    "esp": "observar",
+    "pre": "observer",
+    "pas": "J'ai observé",
+    "fut": "J'observerai",
+    "audio": {
+      "pre": "observer.mp3",
+      "pas": "j-ai-observe.mp3",
+      "fut": "J--observerai.mp3"
+    }
+  },
+  {
+    "id": 6,
+    "esp": "participar",
+    "pre": "participer",
+    "pas": "J'ai participé",
+    "fut": "Je participerai",
+    "audio": {
+      "pre": "participer.mp3",
+      "pas": "j-ai-participe.mp3",
+      "fut": "je-participerai.mp3"
+    }
+  },
+  {
+    "id": 7,
+    "esp": "ordenar",
+    "pre": "ordonner",
+    "pas": "J'ai ordonné",
+    "fut": "J'ordonnerai",
+    "audio": {
+      "pre": "ordonner.mp3",
+      "pas": "j-ai-ordonne.mp3",
+      "fut": "j--ordonnerai.mp3"
+    }
+  },
+  {
+    "id": 8,
+    "esp": "cantar",
+    "pre": "chanter",
+    "pas": "J'ai chanté",
+    "fut": "Je chanterai",
+    "audio": {
+      "pre": "chanter.mp3",
+      "pas": "j-ai-chante.mp3",
+      "fut": "je-chanterai.mp3"
+    }
+  },
+  {
+    "id": 9,
+    "esp": "bailar",
+    "pre": "danser",
+    "pas": "J'ai dansé",
+    "fut": "Je danserai",
+    "audio": {
+      "pre": "danser.mp3",
+      "pas": "j-ai-danse.mp3",
+      "fut": "je-danserai.mp3"
+    }
+  },
+  {
+    "id": 10,
+    "esp": "jugar",
+    "pre": "jouer",
+    "pas": "J'ai joué",
+    "fut": "Je jouerai",
+    "audio": {
+      "pre": "jouer.mp3",
+      "pas": "j-ai-joue.mp3",
+      "fut": "je-jouerai.mp3"
+    }
+  },
+  {
+    "id": 11,
+    "esp": "entrar",
+    "pre": "entrer",
+    "pas": "Je suis entré",
+    "fut": "J'entrerai",
+    "audio": {
+      "pre": "entrer.mp3",
+      "pas": "j-suis-entre.mp3",
+      "fut": "j--entrerai.mp3"
+    }
+  },
+  {
+    "id": 12,
+    "esp": "lavar",
+    "pre": "laver",
+    "pas": "J'ai lavé",
+    "fut": "Je laverai",
+    "audio": {
+      "pre": "laver.mp3",
+      "pas": "j-ai-lave.mp3",
+      "fut": "je-laverai.mp3"
+    }
+  },
+  {
+    "id": 13,
+    "esp": "lanzar",
+    "pre": "lancer",
+    "pas": "J'ai lancé",
+    "fut": "Je lancerai",
+    "audio": {
+      "pre": "lancer.mp3",
+      "pas": "j-ai-lance.mp3",
+      "fut": "je-lancerai.mp3"
+    }
+  },
+  {
+    "id": 14,
+    "esp": "cocinar",
+    "pre": "cuisiner",
+    "pas": "J'ai cuisiné",
+    "fut": "Je cuisinerai",
+    "audio": {
+      "pre": "cuisiner.mp3",
+      "pas": "j-ai-cuisine.mp3",
+      "fut": "je-cuisinerai.mp3"
+    }
+  },
+  {
+    "id": 15,
+    "esp": "preparar",
+    "pre": "préparer",
+    "pas": "J'ai préparé",
+    "fut": "Je préparerai",
+    "audio": {
+      "pre": "preparer.mp3",
+      "pas": "j-ai-prepare.mp3",
+      "fut": "je-preparerai.mp3"
+    }
+  },
+  {
+    "id": 16,
+    "esp": "viajar",
+    "pre": "voyager",
+    "pas": "J'ai voyagé",
+    "fut": "Je voyagerai",
+    "audio": {
+      "pre": "voyager.mp3",
+      "pas": "j-ai-voyage.mp3",
+      "fut": "je-voyagerai.mp3"
+    }
+  },
+  {
+    "id": 17,
+    "esp": "caminar",
+    "pre": "marcher",
+    "pas": "J'ai marché",
+    "fut": "Je marcherai",
+    "audio": {
+      "pre": "marcher.mp3",
+      "pas": "j-ai-marche.mp3",
+      "fut": "je-marcherai.mp3"
+    }
+  },
+  {
+    "id": 18,
+    "esp": "saltar",
+    "pre": "sauter",
+    "pas": "J'ai sauté",
+    "fut": "Je sauterai",
+    "audio": {
+      "pre": "sauter.mp3",
+      "pas": "j-ai-saute.mp3",
+      "fut": "je-sauterai.mp3"
+    }
+  },
+  {
+    "id": 19,
+    "esp": "compartir",
+    "pre": "partager",
+    "pas": "J'ai partagé",
+    "fut": "Je partagerai",
+    "audio": {
+      "pre": "partager.mp3",
+      "pas": "j-ai-partage.mp3",
+      "fut": "je-partagerai.mp3"
+    }
+  },
+  {
+    "id": 20,
+    "esp": "comprar",
+    "pre": "acheter",
+    "pas": "J'ai acheté",
+    "fut": "J'achèterai",
+    "audio": {
+      "pre": "acheter.mp3",
+      "pas": "j-ai-achete.mp3",
+      "fut": "j--acheterai.mp3"
+    }
+  },
+  {
+    "id": 21,
+    "esp": "pagar",
+    "pre": "payer",
+    "pas": "J'ai payé",
+    "fut": "Je payerai",
+    "audio": {
+      "pre": "payer.mp3",
+      "pas": "j-ai-paye.mp3",
+      "fut": "je-payerai.mp3"
+    }
+  },
+  {
+    "id": 22,
+    "esp": "completar",
+    "pre": "compléter",
+    "pas": "J'ai complété",
+    "fut": "Je compléterai",
+    "audio": {
+      "pre": "completer.mp3",
+      "pas": "j-ai-complete.mp3",
+      "fut": "je-completerai.mp3"
+    }
+  },
+  {
+    "id": 23,
+    "esp": "adorar",
+    "pre": "adorer",
+    "pas": "J'ai adoré",
+    "fut": "J'adorerai",
+    "audio": {
+      "pre": "adorer.mp3",
+      "pas": "j-ai-adore.mp3",
+      "fut": "j-adorerai.mp3"
+    }
+  },
+  {
+    "id": 24,
+    "esp": "amar",
+    "pre": "aimer",
+    "pas": "J'ai aimé",
+    "fut": "J'aimerai",
+    "audio": {
+      "pre": "aimer.mp3",
+      "pas": "j-ai-aime.mp3",
+      "fut": "j--aimerai.mp3"
+    }
+  },
+  {
+    "id": 25,
+    "esp": "apreciar",
+    "pre": "apprécier",
+    "pas": "J'ai apprécié",
+    "fut": "J'apprécierai",
+    "audio": {
+      "pre": "apprecier.mp3",
+      "pas": "j-ai-apprecie.mp3",
+      "fut": "j--apprecierai.mp3"
+    }
+  },
+  {
+    "id": 26,
+    "esp": "cortar",
+    "pre": "couper",
+    "pas": "J'ai coupé",
+    "fut": "Je couperai",
+    "audio": {
+      "pre": "couper.mp3",
+      "pas": "j-ai-coupe.mp3",
+      "fut": "je-couperai.mp3"
+    }
+  },
+  {
+    "id": 27,
+    "esp": "quebrar",
+    "pre": "casser",
+    "pas": "J'ai cassé",
+    "fut": "Je casserai",
+    "audio": {
+      "pre": "casser.mp3",
+      "pas": "j-ai-casse.mp3",
+      "fut": "je-casserai.mp3"
+    }
+  },
+  {
+    "id": 28,
+    "esp": "mover",
+    "pre": "bouger",
+    "pas": "J'ai bougé",
+    "fut": "Je bougerai",
+    "audio": {
+      "pre": "bouger.mp3",
+      "pas": "j-ai-bouge.mp3",
+      "fut": "je-bougerai.mp3"
+    }
+  },
+  {
+    "id": 29,
+    "esp": "cambiar",
+    "pre": "changer",
+    "pas": "J'ai changé",
+    "fut": "Je changerai",
+    "audio": {
+      "pre": "changer.mp3",
+      "pas": "j-ai-change.mp3",
+      "fut": "je-changerai.mp3"
+    }
+  },
+  {
+    "id": 30,
+    "esp": "comenzar",
+    "pre": "commencer",
+    "pas": "J'ai commencé",
+    "fut": "Je commencerai",
+    "audio": {
+      "pre": "commencer.mp3",
+      "pas": "j-ai-commence.mp3",
+      "fut": "je-commencerai.mp3"
+    }
+  },
+  {
+    "id": 31,
+    "esp": "dar",
+    "pre": "donner",
+    "pas": "J'ai donné",
+    "fut": "Je donnerai",
+    "audio": {
+      "pre": "donner.mp3",
+      "pas": "j-ai-donne.mp3",
+      "fut": "je-donnerai.mp3"
+    }
+  },
+  {
+    "id": 32,
+    "esp": "detestar",
+    "pre": "détester",
+    "pas": "J'ai détesté",
+    "fut": "Je détesterai",
+    "audio": {
+      "pre": "detester.mp3",
+      "pas": "j-ai-deteste.mp3",
+      "fut": "je-detesterai.mp3"
+    }
+  },
+  {
+    "id": 33,
+    "esp": "estudiar",
+    "pre": "étudier",
+    "pas": "J'ai étudié",
+    "fut": "J'étudierai",
+    "audio": {
+      "pre": "etudier.mp3",
+      "pas": "j-ai-etudie.mp3",
+      "fut": "j-etudierai.mp3"
+    }
+  },
+  {
+    "id": 34,
+    "esp": "invitar",
+    "pre": "inviter",
+    "pas": "J'ai invité",
+    "fut": "J'inviterai",
+    "audio": {
+      "pre": "inviter.mp3",
+      "pas": "j-ai-invite.mp3",
+      "fut": "j-inviterai.mp3"
+    }
+  },
+  {
+    "id": 35,
+    "esp": "ganar",
+    "pre": "gagner",
+    "pas": "J'ai gagné",
+    "fut": "Je gagnerai",
+    "audio": {
+      "pre": "gagner.mp3",
+      "pas": "j-ai-gagner.mp3",
+      "fut": "je-gagnerai.mp3"
+    }
+  },
+  {
+    "id": 36,
+    "esp": "repetir",
+    "pre": "répéter",
+    "pas": "J'ai répété",
+    "fut": "Je répéterai",
+    "audio": {
+      "pre": "repeter.mp3",
+      "pas": "j-ai-repete.mp3",
+      "fut": "je-repeterai.mp3"
+    }
+  },
+  {
+    "id": 37,
+    "esp": "respetar",
+    "pre": "respecter",
+    "pas": "J'ai respecté",
+    "fut": "Je respecterai",
+    "audio": {
+      "pre": "respecter.mp3",
+      "pas": "j-ai-respecte.mp3",
+      "fut": "je-respecterai.mp3"
+    }
+  },
+  {
+    "id": 38,
+    "esp": "quedarse",
+    "pre": "rester",
+    "pas": "Je suis resté",
+    "fut": "Je resterai",
+    "audio": {
+      "pre": "rester.mp3",
+      "pas": "j-suis-reste.mp3",
+      "fut": "je-resterai.mp3"
+    }
+  },
+  {
+    "id": 39,
+    "esp": "abandonar",
+    "pre": "abandonner",
+    "pas": "J'ai abandonné",
+    "fut": "J'abandonnerai",
+    "audio": {
+      "pre": "abandonner.mp3",
+      "pas": "j-ai-abandonne.mp3",
+      "fut": "j--abandonnerai.mp3"
+    }
+  },
+  {
+    "id": 40,
+    "esp": "encontrarse",
+    "pre": "rencontrer",
+    "pas": "J'ai rencontré",
+    "fut": "Je rencontrerai",
+    "audio": {
+      "pre": "rencontrer.mp3",
+      "pas": "j-ai-rencontre.mp3",
+      "fut": "je-rencontrerai.mp3"
+    }
+  },
+  {
+    "id": 41,
+    "esp": "desear",
+    "pre": "souhaiter",
+    "pas": "J'ai souhaité",
+    "fut": "Je souhaiterai",
+    "audio": {
+      "pre": "souhaiter.mp3",
+      "pas": "j-ai-souhaite.mp3",
+      "fut": "je-souhaiterai.mp3"
+    }
+  },
+  {
+    "id": 42,
+    "esp": "tocar",
+    "pre": "toucher",
+    "pas": "J'ai touché",
+    "fut": "Je toucherai",
+    "audio": {
+      "pre": "toucher.mp3",
+      "pas": "j-ai-touche.mp3",
+      "fut": "je-toucherai.mp3"
+    }
+  },
+  {
+    "id": 43,
+    "esp": "votar",
+    "pre": "voter",
+    "pas": "J'ai voté",
+    "fut": "Je voterai",
+    "audio": {
+      "pre": "voter.mp3",
+      "pas": "j-ai-vote.mp3",
+      "fut": "je-voterai.mp3"
+    }
+  },
+  {
+    "id": 44,
+    "esp": "soñar",
+    "pre": "rêver",
+    "pas": "J'ai rêvé",
+    "fut": "Je rêverai",
+    "audio": {
+      "pre": "rever.mp3",
+      "pas": "j-ai-reve.mp3",
+      "fut": "je-reverai.mp3"
+    }
+  },
+  {
+    "id": 45,
+    "esp": "llorar",
+    "pre": "pleurer",
+    "pas": "J'ai pleuré",
+    "fut": "Je pleurerai",
+    "audio": {
+      "pre": "pleurer.mp3",
+      "pas": "j-ai-pleure.mp3",
+      "fut": "je-pleurerai.mp3"
+    }
+  },
+  {
+    "id": 47,
+    "esp": "salvar",
+    "pre": "sauver",
+    "pas": "J'ai sauvé",
+    "fut": "Je sauverai",
+    "audio": {
+      "pre": "sauver.mp3",
+      "pas": "j-ai-sauve.mp3",
+      "fut": "je-sauverai.mp3"
+    }
+  },
+  {
+    "id": 48,
+    "esp": "proteger",
+    "pre": "protéger",
+    "pas": "J'ai protégé",
+    "fut": "Je protégerai",
+    "audio": {
+      "pre": "proteger.mp3",
+      "pas": "j-ai-protege.mp3",
+      "fut": "je-protegerai.mp3"
+    }
+  },
+  {
+    "id": 49,
+    "esp": "habitar",
+    "pre": "habiter",
+    "pas": "J'ai habité",
+    "fut": "J'habiterai",
+    "audio": {
+      "pre": "habiter.mp3",
+      "pas": "j-ai-habite.mp3",
+      "fut": "j-habiterai.mp3"
+    }
+  },
+  {
+    "id": 50,
+    "esp": "pedir",
+    "pre": "demander",
+    "pas": "J'ai demandé",
+    "fut": "Je demanderai",
+    "audio": {
+      "pre": "demander.mp3",
+      "pas": "j-ai-demande.mp3",
+      "fut": "je-demanderai.mp3"
+    }
+  },
+  {
+    "id": 51,
+    "esp": "caer",
+    "pre": "tomber",
+    "pas": "Je suis tombé",
+    "fut": "Je tomberai",
+    "audio": {
+      "pre": "tomber.mp3",
+      "pas": "je-suis-tombe.mp3",
+      "fut": "je-tomberai.mp3"
+    }
+  },
+  {
+    "id": 52,
+    "esp": "subir",
+    "pre": "monter",
+    "pas": "Je suis monté",
+    "fut": "Je monterai",
+    "audio": {
+      "pre": "monter.mp3",
+      "pas": "je-suis-monte.mp3",
+      "fut": "je-monterai.mp3"
+    }
+  },
+  {
+    "id": 53,
+    "esp": "tener",
+    "pre": "avoir",
+    "pas": "J'ai eu",
+    "fut": "J'aurai",
+    "audio": {
+      "pre": "avoir.mp3",
+      "pas": "j-ai-eu.mp3",
+      "fut": "j--aurai.mp3"
+    }
+  },
+  {
+    "id": 54,
+    "esp": "ser o estar",
+    "pre": "être",
+    "pas": "J'ai été",
+    "fut": "Je serai",
+    "audio": {
+      "pre": "etre.mp3",
+      "pas": "j-ai-ete.mp3",
+      "fut": "je-serai.mp3"
+    }
+  },
+  {
+    "id": 55,
+    "esp": "hacer",
+    "pre": "faire",
+    "pas": "J'ai fait",
+    "fut": "Je ferai",
+    "audio": {
+      "pre": "faire.mp3",
+      "pas": "j-ai-fait.mp3",
+      "fut": "je-ferai.mp3"
+    }
+  },
+  {
+    "id": 56,
+    "esp": "ir",
+    "pre": "aller",
+    "pas": "Je suis allé",
+    "fut": "J'irai",
+    "audio": {
+      "pre": "aller.mp3",
+      "pas": "je-suis-alle.mp3",
+      "fut": "J--irai.mp3"
+    }
+  },
+  {
+    "id": 57,
+    "esp": "querer",
+    "pre": "vouloir",
+    "pas": "J'ai voulu",
+    "fut": "Je voudrai",
+    "audio": {
+      "pre": "vouloir.mp3",
+      "pas": "j-ai-voulu.mp3",
+      "fut": "je-voudrai.mp3"
+    }
+  },
+  {
+    "id": 58,
+    "esp": "poder",
+    "pre": "pouvoir",
+    "pas": "J'ai pu",
+    "fut": "Je pourrai",
+    "audio": {
+      "pre": "pouvoir.mp3",
+      "pas": "j-ai-pu.mp3",
+      "fut": "je-pourrai.mp3"
+    }
+  },
+  {
+    "id": 59,
+    "esp": "batir",
+    "pre": "battre",
+    "pas": "J'ai battu",
+    "fut": "Je battrai",
+    "audio": {
+      "pre": "battre.mp3",
+      "pas": "j-ai-battu.mp3",
+      "fut": "je-battrai.mp3"
+    }
+  },
+  {
+    "id": 60,
+    "esp": "escribir",
+    "pre": "écrire",
+    "pas": "J'ai écrit",
+    "fut": "J'écrirai",
+    "audio": {
+      "pre": "ecrire.mp3",
+      "pas": "j-ai-ecrit.mp3",
+      "fut": "j--ecrirai.mp3"
+    }
+  },
+  {
+    "id": 61,
+    "esp": "decir",
+    "pre": "dire",
+    "pas": "J'ai dit",
+    "fut": "Je dirai",
+    "audio": {
+      "pre": "dire.mp3",
+      "pas": "j-ai-dit.mp3",
+      "fut": "je-dirai.mp3"
+    }
+  },
+  {
+    "id": 62,
+    "esp": "venir",
+    "pre": "venir",
+    "pas": "Je suis venu",
+    "fut": "Je viendrai",
+    "audio": {
+      "pre": "venir.mp3",
+      "pas": "je-suis-venu.mp3",
+      "fut": "je-viendrai.mp3"
+    }
+  },
+  {
+    "id": 63,
+    "esp": "completar",
+    "pre": "remplir",
+    "pas": "J'ai rempli",
+    "fut": "Je remplirai",
+    "audio": {
+      "pre": "remplir.mp3",
+      "pas": "j-ai-remplit.mp3",
+      "fut": "je-remplirai.mp3"
+    }
+  },
+  {
+    "id": 64,
+    "esp": "partir",
+    "pre": "partir",
+    "pas": "Je suis parti",
+    "fut": "Je partirai",
+    "audio": {
+      "pre": "partir.mp3",
+      "pas": "je-suis-parti.mp3",
+      "fut": "je-partirai.mp3"
+    }
+  },
+  {
+    "id": 65,
+    "esp": "meter",
+    "pre": "mettre",
+    "pas": "J'ai mis",
+    "fut": "Je mettrai",
+    "audio": {
+      "pre": "mettre.mp3",
+      "pas": "j-ai-mis.mp3",
+      "fut": "je-mettrai.mp3"
+    }
+  },
+  {
+    "id": 66,
+    "esp": "mentir",
+    "pre": "mentir",
+    "pas": "J'ai menti",
+    "fut": "Je mentirai",
+    "audio": {
+      "pre": "mentir.mp3",
+      "pas": "j-ai-menti.mp3",
+      "fut": "je-mentirai.mp3"
+    }
+  },
+  {
+    "id": 67,
+    "esp": "terminar",
+    "pre": "finir",
+    "pas": "J'ai fini",
+    "fut": "Je finirai",
+    "audio": {
+      "pre": "finir.mp3",
+      "pas": "j-ai-fini.mp3",
+      "fut": "je-finirai.mp3"
+    }
+  },
+  {
+    "id": 68,
+    "esp": "salir",
+    "pre": "sortir",
+    "pas": "Je suis sorti",
+    "fut": "Je sortirai",
+    "audio": {
+      "pre": "sortir.mp3",
+      "pas": "je-suis-sorti.mp3",
+      "fut": "je-sortirai.mp3"
+    }
+  },
+  {
+    "id": 69,
+    "esp": "vender",
+    "pre": "vendre",
+    "pas": "J'ai vendu",
+    "fut": "Je vendrai",
+    "audio": {
+      "pre": "vendre.mp3",
+      "pas": "j-ai-vendu.mp3",
+      "fut": "je-vendrai.mp3"
+    }
+  },
+  {
+    "id": 70,
+    "esp": "agarrar",
+    "pre": "prendre",
+    "pas": "J'ai pris",
+    "fut": "Je prendrai",
+    "audio": {
+      "pre": "prendre.mp3",
+      "pas": "j-ai-pris.mp3",
+      "fut": "je-prendrai.mp3"
+    }
+  },
+  {
+    "id": 71,
+    "esp": "oir",
+    "pre": "entendre",
+    "pas": "J'ai entendu",
+    "fut": "J'entendrai",
+    "audio": {
+      "pre": "entendre.mp3",
+      "pas": "j-ai-entendu.mp3",
+      "fut": "j--entendrai.mp3"
+    }
+  },
+  {
+    "id": 72,
+    "esp": "comprender",
+    "pre": "comprendre",
+    "pas": "J'ai compris",
+    "fut": "Je comprendrai",
+    "audio": {
+      "pre": "comprendre.mp3",
+      "pas": "j-ai-compris.mp3",
+      "fut": "je-comprendrai.mp3"
+    }
+  },
+  {
+    "id": 73,
+    "esp": "responder",
+    "pre": "répondre",
+    "pas": "J'ai répondu",
+    "fut": "Je répondrai",
+    "audio": {
+      "pre": "repondre.mp3",
+      "pas": "j-ai-repondu.mp3",
+      "fut": "je-repondrai.mp3"
+    }
+  },
+  {
+    "id": 74,
+    "esp": "correr",
+    "pre": "courir",
+    "pas": "J'ai couru",
+    "fut": "Je courrai",
+    "audio": {
+      "pre": "courir.mp3",
+      "pas": "j-ai-couru.mp3",
+      "fut": "je-courrerai.mp3"
+    }
+  },
+  {
+    "id": 75,
+    "esp": "perder",
+    "pre": "perdre",
+    "pas": "J'ai perdu",
+    "fut": "Je perdrai",
+    "audio": {
+      "pre": "perdre.mp3",
+      "pas": "j-ai-perdu.mp3",
+      "fut": "je-perdrai.mp3"
+    }
+  },
+  {
+    "id": 76,
+    "esp": "saber",
+    "pre": "savoir",
+    "pas": "J'ai sû",
+    "fut": "Je saurai",
+    "audio": {
+      "pre": "savoir.mp3",
+      "pas": "j-ai-su.mp3",
+      "fut": "savoir.mp3"
+    }
+  },
+  {
+    "id": 77,
+    "esp": "vivir",
+    "pre": "vivre",
+    "pas": "J'ai vécu",
+    "fut": "Je vivrai",
+    "audio": {
+      "pre": "vivre.mp3",
+      "pas": "j-ai-vecu.mp3",
+      "fut": "vivre.mp3"
+    }
+  },
+  {
+    "id": 78,
+    "esp": "reir",
+    "pre": "rire",
+    "pas": "J'ai ri",
+    "fut": "Je rirai",
+    "audio": {
+      "pre": "rire.mp3",
+      "pas": "j-ai-ri.mp3",
+      "fut": "je-rirai.mp3"
+    }
+  },
+  {
+    "id": 79,
+    "esp": "ver",
+    "pre": "voir",
+    "pas": "J'ai vu",
+    "fut": "Je verrai",
+    "audio": {
+      "pre": "voir.mp3",
+      "pas": "j-ai-vu.mp3",
+      "fut": "je-verrai.mp3"
+    }
+  },
+  {
+    "id": 80,
+    "esp": "nacer",
+    "pre": "naître",
+    "pas": "Je suis né",
+    "fut": "Je naîtrai",
+    "audio": {
+      "pre": "naitre.mp3",
+      "pas": "je-suis-ne.mp3",
+      "fut": "je-naitrai.mp3"
+    }
+  },
+  {
+    "id": 81,
+    "esp": "descender",
+    "pre": "descendre",
+    "pas": "Je suis descendu",
+    "fut": "Je descendrai",
+    "audio": {
+      "pre": "descendre.mp3",
+      "pas": "je-suis-descendu.mp3",
+      "fut": "je-descendrai.mp3"
+    }
+  },
+  {
+    "id": 82,
+    "esp": "morir",
+    "pre": "mourir",
+    "pas": "Je suis mort",
+    "fut": "Je mourrai",
+    "audio": {
+      "pre": "mourir.mp3",
+      "pas": "je-suis-mort.mp3",
+      "fut": "je-mourai.mp3"
+    }
+  }
+]
